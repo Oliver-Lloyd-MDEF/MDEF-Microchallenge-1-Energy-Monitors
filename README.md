@@ -17,3 +17,5 @@ Within this challenge there were still a lot of unknowns in what we exactly want
 ![WhatsApp Image 2024-02-13 at 15 10 56_7713f84c](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/4d083b9f-1867-44ee-ab8d-1e6ee31deb03)
 
 Finally as we talked and discussed we realized that the main task for the first challenge would be to connect to an existing energy monitor and use that data to create easy ways for people to comprehend visual data but also in the trend of what if you could have a conversation with your house. We really want to aim and try and get to a point that the
+
+https://editor.p5js.org/carlotta.alberta.joana.hylkema/full/_tvl6Z_pT
