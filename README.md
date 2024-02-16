@@ -20,8 +20,7 @@ Finally as we talked and discussed we realized that the main task for the first 
 
 The first step for us on the journey of this project was understanding the whole system we wanted to build and which part was essential for this challenge. We drew a diagram of all the part and then discussed which worked for the current themes and timeframe. The diagram shown below is the whole system and we decided to focus on the top part for now and leave the AI interaction for another challenge. 
 
-https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/310f3ca4-8152-4f4e-bc9b-3fbbca1ce592
-
+![+ (2)](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/372b4e67-da85-48e5-985e-317f4e65b7a2)
 
 After the design of the overall system was udnerstood we set out to develop the various parts of the system. The first thing we did was decide on how we could plan the coming days and which thigns we need to code and design. THe majority of our time was spent coding and troubleshooting. 
 
