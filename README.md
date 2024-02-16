@@ -77,3 +77,4 @@ A key point for the future of our design was to create a messaging services that
 **Physical Device**
 
 The physical device is part of our personal goal to create opensourced energy monitors that people could make at home if they want that can be used in a non-intrusive and easy manner. The goal is that instead of having many plugs in all sockets there would be a devices that can clamp onto a wire in the distributor box and that way all energy could be measured. With this in mind we have started to research potential solutions and necessary technology. We have found many helpful tools that we could use and are excited to try and develop this aspect further. 
+![image](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/642fa561-3b67-4de4-821c-6ec5d592ec33)
