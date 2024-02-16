@@ -33,5 +33,26 @@ https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/asset
 
 **Main issues we ran into:**
 - Raspberry Pi connection as main brain, the problem here was that after we shut down the Pi once it was set up it stopped working. We tried multiple things to get it fixed but as it wasnt working at the moment for this challenge we decided to shift focus and run the programs off one laptop for now. The idea behind this is that if we can use one laptop using websocket and POST to send messages to different interfaces once the Pi is up and running we will be able to shift the current systems to the Pi computer.
+  ![IMG-20240216-WA0005](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/7173b2a2-cddc-4a8e-b9f8-44c9870418cf)
   
-- Using Mosquitto MQTT. The idea at the start was to use websocket and POST to test the code and the connections before shifting to MQTT, however when we tried to alter the codes and get the libraries running we ran into the problem that it didn't want to connect through the IP adress. We feel that this might have to do with the firewalls and security measures on our laptops so in the future we want to see what would happen if we change the main system to the Pi and then the 
+- Using Mosquitto MQTT. The idea at the start was to use websocket and POST to test the code and the connections before shifting to MQTT, however when we tried to alter the codes and get the libraries running we ran into the problem that it didn't want to connect through the IP adress. We feel that this might have to do with the firewalls and security measures on our laptops so in the future we want to see what would happen if we change the main system to the Pi and then test the current code and see afterwards if we could shift.
+
+- Using NodeRed to send data to P5js. This is something we really though would be easy to do but as we coded further we realized that websocket node didn't work with P5js as it was not considered secure. As we also could not figure out MQTT this meant it wasn't possible to connect directly through Nodered and for the moment we used two different python scripts running at the same time.
+
+### Final Result
+
+_Visual Representation: _
+The visual representation of our data was designed using P5.js. We created a code that can be found above in the file Visual Representation. It is made to run off P5js but can also be used directly on websites if needed. First the python code connects to the tapo plug and then uses websocket to send the value of todays energy to the P5js script. Here the energy is then mapped and converted into an amount of particles that need to be added. With this in mind the busier the drawing the more energy that is being consumed at that given moment. 
+
+![image](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/140c7e0e-f6f4-43a9-af5e-58078e831214)
+
+_Dashboard:_
+The dashboard is still at the beginning stages of development bt
+http://172.16.22.127:1880/ui
+
+
+### Thinking Further
+
+Connection to Telegram
+
+Physical Device
