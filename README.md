@@ -40,19 +40,25 @@ https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/asset
 - Using NodeRed to send data to P5js. This is something we really though would be easy to do but as we coded further we realized that websocket node didn't work with P5js as it was not considered secure. As we also could not figure out MQTT this meant it wasn't possible to connect directly through Nodered and for the moment we used two different python scripts running at the same time.
 
 ### Final Result
+_Connecting to Tapo:_
+The first step and first result we realized was connecting to the TAPO plug via python code and reading the data. This was essential for all further steps and the code that reads this data is shared above called MeasurerTapo. This is already a fun tool if you want to create your own little dashboard of energy and need to grab the data from the device as currently you can only access the data in a closed system of the app.
 
-_Visual Representation: _
+_Printed Case Pi:_
+At the beginning of the challenge we also realized that while this would be mostly software development we wanted to use the 3d printers in some way. We noticed that the Raspberry Pi that we wanted to use was very unprotected at the moment and therefore decided to print a snapfit case to protect all the hardware. This design can be found above and the final printed case is seen below. 
+![Term 2 - Frame 2](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/6c1f384e-97b7-43f9-b3f5-40dccf836d9c)
+
+_Visual Representation:_
 The visual representation of our data was designed using P5.js. We created a code that can be found above in the file Visual Representation. It is made to run off P5js but can also be used directly on websites if needed. First the python code connects to the tapo plug and then uses websocket to send the value of todays energy to the P5js script. Here the energy is then mapped and converted into an amount of particles that need to be added. With this in mind the busier the drawing the more energy that is being consumed at that given moment. 
 
 ![image](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/140c7e0e-f6f4-43a9-af5e-58078e831214)
 
 _Dashboard:_
-The dashboard is still at the beginning stages of development bt
-http://172.16.22.127:1880/ui
+The dashboard is still at the beginning stages of development but for now we have managed to connect our incoming data to a dashboard using NodeRed. The current state of our dashboard is seen below. If you want to create your own nodered the code that we used for our flow is shared above. This includes a small part that is focussed on the beginning steps of using a chatbot to talk to us based on the energy usage.
 
+![WhatsApp Image 2024-02-16 at 12 34 13_856bacb5](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/6f2cbd90-a71b-411f-9870-66dae587cc19)
 
 ### Thinking Further
 
-Connection to Telegram
+_Connection to Telegram_
 
-Physical Device
+_Physical Device_
