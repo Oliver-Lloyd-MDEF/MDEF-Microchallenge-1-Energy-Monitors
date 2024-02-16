@@ -13,6 +13,7 @@ It quicjly became clear that we wanted to continue and use these microchallenges
 Within this challenge there were still a lot of unknowns in what we exactly wanted to achieve. We decided to brainstorm and ideate on both the final product and the main function.
 
 ![Screenshot 2024-02-16 101435](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/88e30bc9-9468-4d94-b105-00adb115a045)
+![image](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/00d039a1-d1fe-46ed-acd0-565735b3877d)
 
 Finally as we talked and discussed we realized that the main task for the first challenge would be to connect to an existing energy monitor and use that data to create easy ways for people to comprehend visual data but also in the trend of what if you could have a conversation with your house. For this particular challenge we decided to focus on connecting with an existing TAPO smartplug and collecting and visualizing that data in a fun and informative way. The main goal was "An open source developed household electricity consumption meter based on arduino, that can display consumption in a visual way and allow people to interact with and understand consumption in a collaborative way. "An open source developed household electricity consumption meter based on arduino, that can display consumption in a visual way and allow people to interact with and understand consumption in a collaborative way."
 
