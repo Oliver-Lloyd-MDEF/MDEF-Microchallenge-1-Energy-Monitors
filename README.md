@@ -72,6 +72,7 @@ The dashboard is still at the beginning stages of development but for now we hav
 A key point for the future of our design was to create a messaging services that would eventually become an AI and learn from a persons energy habits and start a conversation with that person. The first step we decided to try out was to get a very basic telegram bot to send a message based on our usage. We got to the point that we had a bot that could send a person a chat message if we injected the message. Currently we are still trying to determine how we could grab the relevant data and prompt messages based on that. 
 ![WhatsApp Image 2024-02-16 at 12 52 08_92e3ca76](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/a73ca4f1-297a-446c-88c8-86aecf50127e)
 ![Dan the energy man](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147057296/0b78bf99-f094-4c97-ab83-7db4e9d5a7a3)
+![image](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/00cf271e-55ce-49c4-b0b1-acdcb7c74ee9)
 
 
 **Physical Device**
