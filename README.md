@@ -11,11 +11,12 @@ It quicjly became clear that we wanted to continue and use these microchallenges
 
 Within this challenge there were still a lot of unknowns in what we exactly wanted to achieve. We decided to brainstorm and ideate on both the final product and the main function.
 
-![WhatsApp Image 2024-02-13 at 15 21 07_ab962a34](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/84872642-bd46-4465-b705-b61efa5c04d2)
-![WhatsApp Image 2024-02-13 at 15 10 59_c1af0791](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/ac353155-7a1a-4d45-a806-041e9377ac54)
-![WhatsApp Image 2024-02-13 at 15 10 59_6762082b](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/0b627b9c-3686-4731-af3b-7a07e6651007)
-![WhatsApp Image 2024-02-13 at 15 10 56_7713f84c](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/4d083b9f-1867-44ee-ab8d-1e6ee31deb03)
+![Screenshot 2024-02-16 101435](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/88e30bc9-9468-4d94-b105-00adb115a045)
 
-Finally as we talked and discussed we realized that the main task for the first challenge would be to connect to an existing energy monitor and use that data to create easy ways for people to comprehend visual data but also in the trend of what if you could have a conversation with your house. We really want to aim and try and get to a point that the
+Finally as we talked and discussed we realized that the main task for the first challenge would be to connect to an existing energy monitor and use that data to create easy ways for people to comprehend visual data but also in the trend of what if you could have a conversation with your house. For this particular challenge we decided to focus on connecting with an existing TAPO smartplug and collecting and visualizing that data in a fun and informative way. The main goal was "An open source developed household electricity consumption meter based on arduino, that can display consumption in a visual way and allow people to interact with and understand consumption in a collaborative way. "An open source developed household electricity consumption meter based on arduino, that can display consumption in a visual way and allow people to interact with and understand consumption in a collaborative way."
 
-https://editor.p5js.org/carlotta.alberta.joana.hylkema/full/_tvl6Z_pT
+### Developping the software
+
+The first step for us on the journey of this project was understanding the whole system we wanted to build and which part was essential for this challenge. We drew a diagram of all the part and then discussed which worked for the current themes and timeframe. The diagram shown below is the whole system and we decided to focus on the top part for now and leave the AI interaction for another challenge. 
+![+ (2)](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/4b3b25f8-20cc-4264-aa22-7575a6036186)
+
