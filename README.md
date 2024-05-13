@@ -1,5 +1,10 @@
 Here you will find al the documentation for the first Microchallenge of the MDEF program 2023 - 2024 undertaken by Carlotta Hylkema and Oliver Lloyd :D 
 
+If you want to few our personal MDEF sites find them here:
+
+* [Carlotta's Site](https://chylkemamdef.github.io/MyPortfolio/index.html)
+* [Oliver's Site](https://oliver-lloyd-mdef.github.io/Oliver-MDEF-Portfolio/)
+
 ### Discovering our interests
 
 We have been collaborating in the past month and already had talked about our shared interest in energy and the perception of this. With this challenge we decided to take a quick look at our interests and shared goals during the projects. 
@@ -15,6 +20,12 @@ Within this challenge there were still a lot of unknowns in what we exactly want
 ![Screenshot 2024-02-16 101435](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/88e30bc9-9468-4d94-b105-00adb115a045)
 ![image](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/00d039a1-d1fe-46ed-acd0-565735b3877d)
 
+Some of the projects that inspired us to undertake this challenge were homemade energy monitors made from scratch or using existing TAPO plugs:
+* [FabAcademy Energy Monitor](https://fabacademy.org/2021/labs/barcelona/students/adrien-laveau/)
+* [Translating TAPO Plug to smart monitor](https://github.com/fishbigger/TapoP100/tree/main)
+* [TP Plug Smart Monitor](https://blog.arduino.cc/2023/09/06/controlling-home-appliances-with-arduino-cloud-and-tp-link-smart-plugs/)
+* [Visualizing Data Artistically](https://www.moma.org/explore/inside_out/2015/12/10/data-visualization-design-and-the-art-of-depicting-reality/)
+  
 Finally as we talked and discussed we realized that the main task for the first challenge would be to connect to an existing energy monitor and use that data to create easy ways for people to comprehend visual data but also in the trend of what if you could have a conversation with your house. For this particular challenge we decided to focus on connecting with an existing TAPO smartplug and collecting and visualizing that data in a fun and informative way. The main goal was "An open source developed household electricity consumption meter based on arduino, that can display consumption in a visual way and allow people to interact with and understand consumption in a collaborative way. "An open source developed household electricity consumption meter based on arduino, that can display consumption in a visual way and allow people to interact with and understand consumption in a collaborative way."
 
 ### Developping the software
@@ -27,11 +38,56 @@ After the design of the overall system was udnerstood we set out to develop the 
 
 https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/assets/147051108/d559d898-63ff-43e6-9fdb-b9c481195c02
 
-**The main tasks we completed were:**
+### The Bill of Materials For Project
+* Visual Studio Code
+* [NodeRed](https://nodered.org/)
+* [Raspberry Pi](https://www.raspberrypi.com/)
+* Telegram 
+* [P5js](https://p5js.org/)
+* [1 TAPO Plug P100](https://www.tapo.com/es/product/smart-plug/tapo-p100/)
 
-- Connecting the TAPO Plug to the Python script
-- Sending information from plug to the NodeRed
-- Creating a visualization based on data from plug using P5js
+
+**The main tasks we completed were:**
+1. Connecting the TAPO Plug to the Python script + Sending information from plug to the NodeRed
+  This was done mainly through going through this [TapoP100 Github](https://github.com/fishbigger/TapoP100/tree/main) and working on how this could work. The main parts of the code are the following:
+
+    The way this code works is that it maps the words being received from the tapo plug and then categorizes the values based on this. This is then packaged into a datapayload and sent to our nodered. 
+    
+    To start the proper libraries are included and set up and the ip adress of the used tapo plug defined:
+    
+            p110 = PyP110.P110("172.20.10.4", "carlottahylkema@gmail.com", "IAACMDEF24!") # check in the tapo plug for ip adress;
+
+    
+    Then the words are created in a map so when receiving data the correct values are taken:
+   
+              word_mapping = {
+                  "runtime": "minutes",
+                  "energy": "watts",
+                  "power": "watts",
+              };   
+
+   Now that the setup is ready, we continue by getting the values for the data we require. This is done by using a function in the library from the TapoP100:
+
+              today_energy = energy.get("today_energy", 0)
+              month_energy = energy.get("month_energy", 0)
+              today_runtime = energy.get("today_runtime", 0)
+              month_runtime = energy.get("month_runtime", 0);
+
+   Finally the data is packaged, prepared and then sent to our NodeRed where it can be processed:
+
+             data = {
+            "today_energy": today_energy,
+            "month_energy": month_energy,
+            "today_runtime": today_runtime,
+            "month_runtime": month_runtime
+            }
+
+            send_to_nodered_dashboard(data);
+   
+
+2. Creating a visualization based on data from plug using P5.js
+
+At the same time as the data being sent to NodeRed it is also being sent to P5.js. Here we were able to create a visual using a library from the
 - Creating an online dashboard from NodeRed
 
 **Main issues we ran into:**
