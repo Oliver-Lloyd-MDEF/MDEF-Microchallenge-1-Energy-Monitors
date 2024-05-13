@@ -87,8 +87,24 @@ https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/asset
 
 2. Creating a visualization based on data from plug using P5.js
 
-At the same time as the data being sent to NodeRed it is also being sent to P5.js. Here we were able to create a visual using a library from the
-- Creating an online dashboard from NodeRed
+At the same time as the data being sent to NodeRed it is also being sent to P5.js. This was an addition of using Websocket(a computer communications protocol, providing a simultaneous two-way communication channel over a single Transmission Control Protocol (TCP) connection) between our running python script and the P%.js website. From here Carlotta found a simple preview of how the value could be used to increase the number of lines seen in the frame. We used this setup and then added a couple of lines of code so that it received the data correctly and used the inputted value for the amount of lines. This way based on the increasing energy usage the lines would grow.
+
+This was done by mapping the incoming energy from 0 to the maximum consumption. This was then translated in a value that related to the number of particles for the line and sent into the [full code](https://github.com/Oliver-Lloyd-MDEF/MDEF-Microchallenge-1-Energy-Monitors/blob/main/Visualization%20Energy/sketch.js):
+
+          var value = parseInt(event.data); // Parse the received value as an integer
+          console.log("Received value:", value);
+          
+          // Adjust line opacity based on energy consumption
+          let maxEnergyConsumption = 1000; // Change this to max energy of day!!!
+          let minParticles = 0; // Minimum line opacity value 
+          let maxParticles = 500; // Maximum line opacity value
+          let totalParticles = map(value, 0, maxEnergyConsumption, minParticles, maxParticles); // Map energy consumption to line opacity range
+          let newParticles = totalParticles - numParticles; 
+          console.log(newParticles);
+          
+3. Creating an online dashboard from NodeRed
+
+Using NodeRed was a new thing for us and both of us were very intrigued by the possibilities of using this to create a humanlike connection. We started very exploratory here and were lucky enough to find out the there was a way that we could connect the incoming data to NodeRed and connect the NodeRed to a chatbot that we created in Telegram. To do this we followed the steps shown in the [Telegram Node Explanation](https://flows.nodered.org/node/node-red-contrib-telegrambot). THis was quite easy and was explained super clear. 
 
 **Main issues we ran into:**
 
